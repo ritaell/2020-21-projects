@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Μετατροπέας</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body class="text-center bg-info">
+    <div class="container p-2">
+        <br>
+        <h2>Κιλά/Γραμμάρια</h2>
+        Κιλά: <input type="number" value=0 id="kilos">
+        Γραμμάρια: <input type="number" value=0 id="grams">
+        <p class="m-2">
+            <button class="btn btn-info btn-outline-light" onclick="to_grams()">Κιλά σε Γραμμάρια</button>
+            <button class="btn btn-info btn-outline-light" onclick="to_kilos()">Γραμμάρια σε Κιλά</button>
+        </p>
+        <br>
+        <hr>
+        <br>
+
+        <h2>Μέτρα/Εκατοστά</h2>
+        Μέτρα: <input type="number" value=0 id="meters">
+        Εκατοστά: <input type="number" value=0 id="centimeters">
+        <p class="m-2">
+            <button class="btn btn-info btn-outline-light" onclick="to_centimeters()">Μέτρα σε Εκατοστά</button>
+            <button class="btn btn-info btn-outline-light" onclick="to_meters()">Εκατοστά σε Μέτρα</button>
+        </p>
+        <br>
+        <hr>
+
+        <h2>Βαθμοί Κελσίου/Βαθμοί Φαρενάιτ</h2>
+        Βαθμοί Κελσίου: <input type="number" value=0 id="c">
+        Βαθμοί Φαρενάιτ:<input type="number" value=0 id="f">
+        <p class="m-2">
+            <button class="btn btn-info btn-outline-light" onclick="to_far()">Κελσίου σε Φαρενάιτ</button>
+            <button class="btn btn-info btn-outline-light" onclick="to_celsius()">Φαρενάιτ σε Κελσίου</button>
+
+        </p>
+        <br>
+        <hr>
+    </div>
+
+    <button class="btn btn-info btn-outline-light m-3" onclick="del()">Εγκαθάριση Όλων</button>
+
+</body>
+
+<script>
+    function to_grams() {
+        var k = document.getElementById("kilos").value;
+        document.getElementById("grams").value = k * 1000;
+    }
+
+    function to_kilos() {
+        var g = document.getElementById("grams").value;
+        document.getElementById("kilos").value = g / 1000;
+    }
+
+    function to_meters() {
+        var c = document.getElementById("centimeters").value;
+        document.getElementById("meters").value = c / 100;
+    }
+
+    function to_centimeters() {
+        var m = document.getElementById("meters").value;
+        document.getElementById("centimeters").value = m * 100;
+    }
+
+    function to_far() {
+        var ce = document.getElementById("c").value;
+        document.getElementById("f").value = ce * 9 / 5 + 32;
+    }
+
+    function to_celsius() {
+        var f = document.getElementById("f").value;
+        document.getElementById("c").value = [f - 32] * [5 / 9];
+    }
+
+    function del() {
+        document.getElementById("grams").value = 0;
+        document.getElementById("kilos").value = 0;
+        document.getElementById("meters").value = 0;
+        document.getElementById("centimeters").value = 0;
+        document.getElementById("c").value = 0;
+        document.getElementById("f").value = 0;
+    }
+</script>
+
+</html>

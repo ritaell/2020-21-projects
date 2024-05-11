@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log-in</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class="container text-center bg-secondary text-light">
+        <h1 class="p-2 m-2"><i>Σύνδεση στη Σελίδα</i></h1>
+
+        <form class="p-2 text-left">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><b>Όνομα Χρήστη</b> / <b>Username</b></label>
+                <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                <br>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"><b>Κωδικός</b> / <b>Password</b></label>
+                    <input type="password" class="form-control" id="password">
+                    <br>
+                </div>
+
+                <button type="submit" class="btn btn-dark" onclick="login()">Είσοδος / Log-in</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function login() {
+        var username = document.getElementById("username").value ;
+        var password = document.getElementById("password").value ;
+        if (password == "1234" && username == "user1"){
+            window.open("Calculator.html")
+        }
+
+        else{
+            alert("Το Username ή ο Kωδικός είναι λάθος")
+        }
+    }
+
+</script>

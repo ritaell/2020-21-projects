@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pet</title>
+    <link rel="stylesheet" href="Pet.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="pet">
+            <h2 id="name"><b>Fluff</b></h2>
+            <p id="face"><img src="Hamster.png" id="i" width="250"></p>
+        </div>
+        <div id="info">
+            <p>Hunger <span id="hungry">100%</span></p>
+            <div id="bar1"></div>
+
+            <p>Happiness <span id="happy">100%</span></p>
+            <div id="bar2"></div>
+
+            <p>Health <span id="health">100%</span></p>
+            <div id="bar3"></div>
+            <br>
+            <div id="buttons">
+                <button id="feed" onclick="feed()">Feed</button>
+                <button id="play" onclick="play()">Play</button>
+                <button id="walk" onclick="walk()">Walk</button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Pet.js"></script>
+
+</html>

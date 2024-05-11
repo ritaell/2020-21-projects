@@ -1,0 +1,88 @@
+body {
+    background-image: url(green.png);
+    background-size: cover;
+     /*  background-image: linear-gradient(to bottom right, #fff200, #1cd11c);*/
+}
+
+#name {
+    margin-top: 45px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button {
+    padding: 1.3em 3em;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #b5c91a;
+    box-shadow: 0px 15px 20px rgba(71, 79, 10, 0.5);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+button:disabled{
+    background-color: gray;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+#info {
+    margin-top: 25px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+}
+
+p {
+    text-shadow: 5px 5px 10px rgba(71, 79, 10);
+    color: #fff;
+    margin-bottom: 5px;
+    transition-duration: 500ms;
+}
+
+p:hover {
+    font-style: italic;
+    font-size: 34px;
+}
+
+#bar1,
+#bar2,
+#bar3 {
+    background-image: linear-gradient(to top left, #73A942, #AAD576);
+    height: 15px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+

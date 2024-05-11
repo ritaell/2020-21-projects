@@ -1,0 +1,84 @@
+body{
+    background-image: url(duotone.png);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin: auto;
+    text-align: auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #E9ECEF;
+    text-shadow: 10px 10px 10px #343A40;
+    font-size: 50px;
+    transition-duration: 750ms;
+}
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+    color: #E9ECEF;
+    text-shadow: 10px 10px 10px #343A40;
+    font-size: 20px;
+    transition-duration: 500ms;
+}
+
+h1:hover{
+    font-size: 60px;
+}
+
+h2:hover{
+    font-size: 25px;
+}
+
+.colorbutton{
+    width: 90px;
+    height: 90px;
+    border: none;
+    box-shadow: 10px 10px 30px #6C757D;
+    border-radius: 50%;
+    margin: 10px 0px 10px 0px;
+    transition-duration: 250ms;
+    cursor:pointer;
+}
+
+.colorbutton:hover{
+    width: 120px;
+    height: 120px;
+    margin: 0px;
+    
+}
+
+#buttons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    
+}
+
+#resetButton{
+    padding: 10px;
+    font-size: 15px;
+    width: 120px;
+    height: auto;
+    background: rgb(233, 236, 239, 0.1);
+    border: 2px solid #E9ECEF;
+    color: #E9ECEF;
+    margin: 10px;
+    box-shadow: 20px 20px 20px #343A40;
+    text-shadow: 2px 2px 2px #343A40;
+    transition-duration: 350ms;
+    cursor:pointer;
+}
+
+#resetButton:hover{
+    background: rgb(233, 236, 239, 0.25);
+    width: 140px;
+    height: auto;
+    font-size: 20px;
+    font-style: italic;
+}

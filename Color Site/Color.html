@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <title>Συμπληρωματικά Χρώματα</title>
+    <link rel="stylesheet" href="Color.css">
+</head>
+
+<body>
+    <div id="box1">
+        <b>Χρώμα</b>
+        <br>
+        <p><i>Red, Green, Blue</i></p>
+        <input type="number" id="red" value="100" onchange="colors()" max="255" min="0">
+        <input type="number" id="green" value="255" onchange="colors()" max="255" min="0">
+        <input type="number" id="blue" value="150" onchange="colors()" max="255" min="0">
+        <div id="color1"></div>
+    </div>
+
+    <div id="box2">
+        <b>Αντίθετο Χρώμα</b>
+        <br>
+        <p><i>Red, Green, Blue</i></p>
+        <input type="number" id="c-red" value="155" disabled>
+        <input type="number" id="c-green" value="0" disabled>
+        <input type="number" id="c-blue" value="105" disabled>
+        <div id="color2"></div>
+    </div>
+</body>
+
+<script>
+    function colors(){
+        var r, g, b;
+        r= document.getElementById("red").value;
+        g= document.getElementById("green").value;
+        b= document.getElementById("blue").value;
+        document.getElementById("color1").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+        var cr, cg, cb;
+        cr = 255 - r;
+        cg = 255 - g;
+        cb = 255 - b;
+        document.getElementById("c-red").value = cr;
+        document.getElementById("c-green").value = cg;
+        document.getElementById("c-blue").value = cb;
+        document.getElementById("color2").style.backgroundColor = "rgb(" + cr + "," + cg + "," + cb + ")";
+    }
+</script>
+
+</html>

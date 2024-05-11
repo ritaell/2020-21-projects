@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Παιχνίδι Ναυμαχίας</title>
+</head>
+
+<body>
+    <h1>Παιχνίδι Ναυμαχίας</h1>
+    <hr>
+    <div id="controls">
+        <input type="number" id="ship" min="1" max="16">
+        <button id="b" onclick="bomb()">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front text"> Go!
+            </span>
+        </button>
+        <link rel="stylesheet" href="Ship.css">
+    </div>
+    <hr>
+    <br>
+    <div id="container">
+        <div id="d1" class="square">1</div>
+        <div id="d2" class="square">2</div>
+        <div id="d3" class="square">3</div>
+        <div id="d4" class="square">4</div>
+        <div id="d5" class="square">5</div>
+        <div id="d6" class="square">6</div>
+        <div id="d7" class="square">7</div>
+        <div id="d8" class="square">8</div>
+        <div id="d9" class="square">9</div>
+        <div id="d10" class="square">10</div>
+        <div id="d11" class="square">11</div>
+        <div id="d12" class="square">12</div>
+        <div id="d13" class="square">13</div>
+        <div id="d14" class="square">14</div>
+        <div id="d15" class="square">15</div>
+        <div id="d16" class="square">16</div>
+    </div>
+</body>
+
+<script>
+    var loc1 = Math.ceil(Math.random() * 16);
+    var loc2 = Math.ceil(Math.random() * 16);
+    var loc3 = Math.ceil(Math.random() * 16);
+    while (loc1 == loc2) {
+        var loc2 = Math.ceil(Math.random() * 16);
+    }
+
+    while (loc1 == loc3 || loc2 == loc3) {
+        var loc3 = Math.ceil(Math.random() * 16);
+    }
+
+    //alert(loc1 + "+" + loc2 + "+" + loc3);
+
+    var guesses = 0;
+    var hits = 0;
+
+    var h1 = loc1;
+    var h2 = loc2;
+    var h3 = loc3;
+
+    function bomb() {
+        var ship = document.getElementById("ship").value;
+        if (ship == "") {
+            alert("Δώσε έναν αριθμό");
+        }
+        else if (ship < 1 || ship > 16) {
+            alert("Δώσε έναν αριθμό μεταξύ το 1 και το 16");
+        }
+
+        else {
+            guesses = guesses + 1;
+            var square = "d" + ship
+            if (ship == loc1 || ship == loc2 || ship == loc3) {
+                document.getElementById(square).style.backgroundColor = "#344E41";
+                document.getElementById(square).innerHTML = "🚢";
+                alert("Hit!!!");
+
+                if (ship == loc1) { loc1 = 0; }
+                if (ship == loc2) { loc2 = 0; }
+                if (ship == loc3) { loc3 = 0; }
+
+                hits = hits + 1;
+                if (hits == 3) {
+                    alert("Συγχαρητήρια! Βύθισες όλο τον στόλο!");
+                    alert("Πλήθος Προσπάθειων : " + guesses + ". Ποσοστό Επιτυχίας: " + [3 / guesses] * 100 + "%");
+                    document.getElementById("ship").disabled = true;
+                    document.getElementById("b").disabled = true;
+
+                }
+
+
+            }
+
+            else {
+                if (ship != h1 && ship != h2 && ship != h3) {
+                    document.getElementById(square).style.backgroundColor = "#344E41";
+                    document.getElementById(square).innerHTML = "❌";
+                    alert("Miss...");
+                }
+                else{
+                    alert("Έχεις ήδη χτυπήσει σε αυτή την θέση")
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>

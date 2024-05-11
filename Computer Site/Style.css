@@ -1,0 +1,212 @@
+/*Basic Tags*/
+body{
+    background-color: rgb(168, 243, 225);
+    font-family:sans-serif ;
+    }
+    
+    header{
+        background-color: rgb(13, 57, 64);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 5px;
+        border: rgb(2, 36, 44) 5px;
+        border-style:dashed;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+/* Page=. Architecture */
+    .box{
+        background-color: rgb(168, 243, 225);
+        color: rgb(2, 36, 44);
+        text-align: center;
+        width: 45%;
+        padding: 10px;
+        border: rgb(2, 36, 44) 5px;
+        border-style: solid;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    img{
+        width: 200px;
+        height: 150px;
+        margin: auto;
+    }
+
+/*Basic Tags*/
+
+    #central{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(2,36,44);
+        overflow: hidden;
+    }
+
+    li{
+        float: left;
+       
+    }
+
+  li a {
+      display: block;
+      color: rgb(168, 243, 225);
+      
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; 
+  }
+
+  li a:hover{
+      background-color: rgb(168, 243, 225) ;
+      color: rgb(2, 36, 44);
+  }
+
+/*Page => Networks*/
+
+  #text{
+width: 50%;
+padding: 5px;
+text-align: justify;      
+}
+
+#network{
+    width: 42%;
+    height: auto;
+}
+
+#iframe{
+    padding: 10px;
+}
+
+/*Page => Languages */
+
+#central_l p{
+text-align: justify;
+padding-right: 60px;
+padding-left: 60px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#central_l h2{
+    text-align: center;
+    color: rgb(13, 57, 64);
+    font-style: italic;
+}
+
+#Languages{
+    margin: auto;
+    margin-bottom: 50px;
+    border: rgb(13, 57, 64) solid 4px;
+}
+
+#Languages th{
+background-color: rgb(2, 36, 44);  
+color: rgb(255, 255, 255);
+padding: 5px;
+font-style: italic;
+}
+
+#Languages td{
+background-color: rgb(168, 243, 225);  
+color: rgb(13, 57, 64);
+padding: 5px;
+font-style: italic;
+text-align: center;
+}
+
+/* Page => Main */
+
+#central_m{
+    text-align: center;
+}
+
+#about{
+    background-color: rgb(13, 57, 64);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#team{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+}
+
+.card img{
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+}
+
+#info{
+    text-align: center;
+}
+
+/* Page => History */
+
+#central_h{
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    background-color: rgb(13, 57, 64);
+    margin-top: 10px;
+    padding: 1px;
+}
+
+marquee{
+    margin:20px
+    
+}
+
+marquee img{
+    height: 200px;
+    width: auto;
+    padding:5px
+}
+
+/* Page => Files */
+
+#central_f p{
+    text-align: justify;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    
+    #Files{
+        margin: auto;
+        margin-bottom: 50px;
+        border: rgb(13, 57, 64) solid 4px;
+    }
+    
+    #Files th{
+    background-color: rgb(2, 36, 44);  
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-style: italic;
+    }
+    
+    #Files td{
+    background-color: rgb(168, 243, 225);  
+    color: rgb(13, 57, 64);
+    padding: 5px;
+    font-style: italic;
+    text-align: center;
+    }

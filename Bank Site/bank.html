@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Η Τράπεζα Μου</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class="container text-light p-3">
+        <div class="container-fluid p-3 bg-light text-dark rounded-top shadow">
+            <h1>Η Τράπεζα μου</h1>
+        </div>
+        <div class="container-fluid p-2 text-light text-right text-monospace">
+            <h6><i id="user">Καλωσήρθες, </i></h6>
+        </div>
+        <i>
+            <p id="sum">Διαθέσιμο Υπόλοιπο : </p>
+        </i>
+        <div class="input-group mb-3 shadow">
+            <span class="input-group-text" id="basic-addon1">Αιτιολογία</span>
+            <input id="why" type="text" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary m-1" type="button" onclick="an()">Ανάληψη</button>
+            <button class="btn btn-outline-secondary m-1" type="button" onclick="kat()">Κατάθεση</button>
+            <input type="number" min="0" id="amount" class="form-control m-1" placeholder="Ποσό">
+        </div>
+    </div>
+</body>
+
+<script>
+    /*
+    user = prompt("Όνομα Χρήστη?");
+    do {
+        pass = prompt("Κωδικός?");
+    } while (pass != 000);
+    document.getElementById("user").innerHTML += user;
+     */
+
+    sum = 1000;
+    document.getElementById("sum").innerHTML += "<b>" + sum + "€" + "</b>";
+
+    function an(){
+        var poso = document.getElementById("amount").value;
+        sum = sum - poso;
+        document.getElementById("sum").innerHTML ="Διαθέσιμο Υπόλοιπο : " + "<b>" + sum + "€" + "</b>";
+        alert("Η συναλλαγή σας ολοκληρώθηκε.");
+    }
+</script>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+
+
+<body id="color">
+    <div class="text-center">
+        <h1 id="title" class="m-2 p-2 shadow p-3 mb-5">Μαγικά με Javascript</h1>
+        <div class="bg-info container-fluid m-2 p-2 shadow p-3 mb-5">
+            <button onclick="hi()">Πάτα με</button>
+        </div>
+
+        <div class="bg-success container-fluid m-2 p-2 shadow p-3 mb-5">
+            <b>Γράψε το όνομά σου:</b>
+            <input type="text" id="name">
+            <button onclick="name1()">Ok!</button>
+        </div>
+
+        <div class="container-fluid m-2 p-2 shadow p-3 mb-5">
+            <button onclick="day()">Μέρα</button>
+            <button onclick="night()">Νύχτα</button>
+        </div>
+
+        <div class="bg-warning m-2 p-2 container-fluid shadow p-3 mb-5">
+            <img id="kapelo" src="hat.png" width="150">
+            <button onclick="lagos()">Με το 1... Με το 2...</button>
+        </div>
+
+        <div id="last1" class="bg-info container-fluid m-2 p-2 shadow p-3 mb-5">
+            <button onclick="last2()">Δεν είναι ωραίο το μπλέ</button>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    function hi() {
+        alert("Γειά σου μπεστιι!")
+    }
+
+    function name1() {
+        var magos = document.getElementById("name").value;
+        document.getElementById("title").innerHTML = "Μαγικά με " + magos;
+    }
+
+    function day() {
+        document.getElementById("color").style.backgroundColor = "white";
+        document.getElementById("title").style.color = "rgb(26, 26, 26)";
+    }
+
+    function night() {
+        document.getElementById("color").style.backgroundColor = "rgb(26, 26, 26)";
+        document.getElementById("title").style.color = "white";
+    }
+
+    function lagos() {
+        document.getElementById("kapelo").src = "bunny.png";
+    }
+
+    function last2() {
+        document.getElementById("last1").classList.remove("bg-info");
+        document.getElementById("last1").classList.add("bg-danger");
+    }
+</script>
+
+</html>

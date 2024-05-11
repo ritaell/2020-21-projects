@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <center>
+        <h1 id="title">Ρίξε τα ζάρια για να δεις αν κέρδισες</h1>
+        <input type="number" id="number" min="2" max="12">
+        <div id="dice">
+            <div id="dice1"></div>
+            <div id="dice2"></div>
+        </div>
+        <button onclick="roll()">Ρίξε τα ζάρια</button>
+    </center>
+</body>
+
+<script>
+    function roll(){
+        var r1 = Math.random() * 6;
+        r1 = Math.ceil(r1);
+        document.getElementById("dice1").innerHTML= r1;
+
+        var r2 = Math.random() * 6;
+        r2 = Math.ceil(r2);
+        document.getElementById("dice2").innerHTML= r2;
+
+        var number = document.getElementById("number").value;
+        if (number == r1 + r2){
+            alert("Κέρδισες!!!");
+        }
+
+        else{
+        alert("Έχασες, προσπάθησε ξανα.");
+        }
+    }
+</script>
+
+</html>

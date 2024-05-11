@@ -1,0 +1,49 @@
+body{
+    background-image: url(duotone.png);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5%;
+}
+
+#title{
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 10px 10px #38040E;
+}
+
+#number{
+    width: 40px;
+    height: 40px;
+    box-shadow: 20px 20px 40px #250902;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#dice1,#dice2{
+    width: 220px;
+    height: 220px;
+    background-image: linear-gradient(#AD2831 , #800E13);
+    margin: 30px;
+    box-shadow: 20px 20px 40px #250902;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#dice{
+    background-image: linear-gradient(#640D14 , #38040E);
+    width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 20px 20px 40px #250902;
+}
+
+button{
+    margin: auto;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-top: 20px;
+    box-shadow: 20px 20px 40px #250902;
+}

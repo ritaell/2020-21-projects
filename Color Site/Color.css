@@ -1,0 +1,43 @@
+body{
+    background-image: url(duotone.png);
+    background-size:cover ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 5px #020509;
+}
+
+#box1, #box2{
+    float: left;
+    margin: 10px;
+    background-image: url(duotone2.png);
+    box-shadow: 20px 20px 20px #020509;
+    padding: 20px;
+    height: 230px;
+    width: 230px;
+    border-radius: 10px;
+}
+
+input{
+    text-align: center;
+    margin: 10px 0px;
+    width: 50px;
+}
+
+#color1, #color2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 10px auto;
+    box-shadow: 10px 10px 10px #020509;
+}
+
+#color1{
+    background-color: rgb(100, 255, 150);
+}
+
+#color2{
+    background-color: rgb(155, 0, 105);
+}
